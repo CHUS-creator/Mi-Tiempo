@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Control de Tiempo</string>
+    <string name="block_task">Bloque de tarea</string>
+    <string name="default_time">01:00</string>
+    <string name="time_format">%1$02d:%2$02d</string>
+    <string name="start">Empezar</string>
+    <string name="pause">Pausar</string>
+    <string name="resume">Reanudar</string>
+    <string name="reset">Reiniciar</string>
+</resources>
