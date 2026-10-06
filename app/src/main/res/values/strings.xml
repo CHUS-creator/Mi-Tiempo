@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Control de Tiempo</string>
-    <string name="block_task">Bloque de tarea</string>
-    <string name="default_time">01:00</string>
+    <string name="my_routines">Mis rutinas</string>
+    <string name="add_routine">Añadir rutina</string>
+    <string name="routine_name">Nombre de la rutina</string>
+    <string name="blocks_title">Bloques</string>
+    <string name="add_task_block">Añadir bloque de tarea</string>
+    <string name="add_pause_block">Añadir bloque de pausa</string>
+    <string name="save">Guardar</string>
+    <string name="delete">Eliminar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete_routine_confirm">¿Eliminar la rutina «%1$s»?</string>
+    <string name="name_required">Introduce un nombre</string>
+    <string name="at_least_one_block">Añade al menos un bloque</string>
+    <string name="task">Tarea</string>
+    <string name="pause_block">Pausa</string>
+    <string name="task_block_label">Tarea: %1$s</string>
+    <string name="pause_block_label">Pausa: %1$s</string>
+    <string name="next_block_label">Siguiente: %1$s (%2$d s)</string>
+    <string name="last_block">Último bloque</string>
+    <string name="routine_finished">Rutina terminada</string>
     <string name="time_format">%1$02d:%2$02d</string>
     <string name="start">Empezar</string>
     <string name="pause">Pausar</string>
     <string name="resume">Reanudar</string>
     <string name="reset">Reiniciar</string>
+    <string name="duration_hint">Duración (s)</string>
+    <string name="move_up">Subir</string>
+    <string name="move_down">Bajar</string>
 </resources>
