@@ -28,4 +28,10 @@
     <string name="duration_hint">Duración (s)</string>
     <string name="move_up">Subir</string>
     <string name="move_down">Bajar</string>
+    <string name="alerts_channel_name">Avisos de bloques</string>
+    <string name="alerts_channel_description">Avisos al empezar y terminar cada bloque de la rutina</string>
+    <string name="block_started_title">Bloque empezado</string>
+    <string name="block_started_text">%1$s: %2$s (%3$d s)</string>
+    <string name="routine_finished_title">Rutina terminada</string>
+    <string name="routine_finished_text">Has completado todos los bloques. ¡Bien hecho!</string>
 </resources>

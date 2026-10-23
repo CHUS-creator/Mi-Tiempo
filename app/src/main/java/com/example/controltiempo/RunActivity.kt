@@ -79,6 +79,9 @@ class RunActivity : AppCompatActivity() {
 
     private fun startOrResumeTimer() {
         val block = blocks[currentBlockIndex]
+        if (remainingMillis >= block.durationSeconds * 1000L) {
+            alertBlockStarted(block)
+        }
         countdownTimer = object : CountDownTimer(remainingMillis, 100L) {
             override fun onTick(millisUntilFinished: Long) {
                 remainingMillis = millisUntilFinished
@@ -97,6 +100,7 @@ class RunActivity : AppCompatActivity() {
         countdownTimer?.cancel()
         countdownTimer = null
         timerRunning = false
+        AlertHelper.playBlockEnd(this)
         if (currentBlockIndex + 1 < blocks.size) {
             loadBlock(currentBlockIndex + 1)
             startOrResumeTimer()
@@ -106,7 +110,31 @@ class RunActivity : AppCompatActivity() {
             nextText.text = ""
             startPauseButton.text = getString(R.string.start)
             updateDisplay()
+            AlertHelper.notifyBlock(
+                this,
+                getString(R.string.routine_finished_title),
+                getString(R.string.routine_finished_text),
+            )
         }
+    }
+
+    private fun alertBlockStarted(block: Block) {
+        AlertHelper.playBlockStart(this)
+        val blockKind = if (block.type == BlockType.TASK) {
+            getString(R.string.task)
+        } else {
+            getString(R.string.pause_block)
+        }
+        AlertHelper.notifyBlock(
+            this,
+            getString(R.string.block_started_title),
+            getString(
+                R.string.block_started_text,
+                blockKind,
+                block.label,
+                block.durationSeconds,
+            ),
+        )
     }
 
     private fun pauseTimer() {
@@ -132,6 +160,7 @@ class RunActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         countdownTimer?.cancel()
+        AlertHelper.cancelNotifications(this)
         super.onDestroy()
     }
 }

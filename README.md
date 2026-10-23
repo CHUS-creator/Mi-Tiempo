@@ -10,12 +10,13 @@ App Android para marcar pautas de tiempo en tareas: gimnasio (tiempo por ejercic
 - Pantalla de edición: nombre de la rutina y bloques de tarea/pausa con duración editable en segundos, reordenables y eliminables.
 - Pantalla de ejecución: temporizador grande con bloque actual, siguiente bloque, empezar/pausar/reanudar y reiniciar.
 - Persistencia con Room (rutinas y bloques).
+- Avisos al empezar y terminar cada bloque: notificación (canal propio, permiso `POST_NOTIFICATIONS` en Android 13+) y sonido corto.
 
 ## Plan
 
 1. Pantalla de ejecución con temporizador fijo. ✅
 2. Rutinas guardadas con Room y pantalla de edición. ✅
-3. Alarmas/notificaciones entre bloques.
+3. Alarmas/notificaciones entre bloques. ✅
 4. Extras futuros: widgets, historial, estadísticas.
 
 ## Cómo abrir
